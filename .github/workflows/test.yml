@@ -22,8 +22,8 @@ jobs:
         
     - name: Superbench
       run: |
-        wget https://raw.githubusercontent.com/oooldking/script/master/superbench.sh
-        sudo bash superbench.sh
+        #wget https://raw.githubusercontent.com/oooldking/script/master/superbench.sh
+        #sudo bash superbench.sh
         
     - name: Install Webbench and Test website
       run: |
@@ -33,6 +33,6 @@ jobs:
         cd webbench-1.5/
         sudo make
         sudo make install
-        #sudo webbench -c 1000 -t 3600 http://zhangnq.com/1934.html
+        sudo webbench -c 20000 -t 3600 http://xirikm.net/2020/719-1.html
 
         
