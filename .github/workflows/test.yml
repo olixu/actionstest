@@ -1,0 +1,32 @@
+name: Github Actions学习与测试
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  ibm-cloud-restart:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Update $ Upgrade
+      run: |
+        apt update && apt upgrade
+        
+    - name: Install Webbench and Test website
+      run: |
+        apt install exuberant-ctags
+        wget http://home.tiscali.cz/~cz210552/distfiles/webbench-1.5.tar.gz
+        tar zxvf webbench-1.5.tar.gz 
+        cd webbench-1.5/
+        make
+        make install
+        webbench -c 1000 -t 60 http://202.120.37.239:8000/3.jpg
+
+        
