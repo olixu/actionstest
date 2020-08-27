@@ -17,7 +17,7 @@ jobs:
 
     - name: Update $ Upgrade
       run: |
-        apt update && apt upgrade
+        sudo apt update && apt upgrade
         
     - name: Install Webbench and Test website
       run: |
