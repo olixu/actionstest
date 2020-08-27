@@ -20,6 +20,10 @@ jobs:
         #sudo apt update
         #sudo apt upgrade
         
+    - name: Superbench
+      run: |
+        wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+        
     - name: Install Webbench and Test website
       run: |
         sudo apt install exuberant-ctags
@@ -28,6 +32,6 @@ jobs:
         cd webbench-1.5/
         sudo make
         sudo make install
-        sudo webbench -c 1000 -t 60 http://202.120.37.239:8000/3.jpg
+        #sudo webbench -c 1000 -t 3600 http://zhangnq.com/1934.html
 
         
