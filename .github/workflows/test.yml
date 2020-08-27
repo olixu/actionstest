@@ -34,6 +34,6 @@ jobs:
         sudo make
         sudo make install
         ulimit -n 65535
-        sudo webbench -c 20000 -t 3600 http://xirikm.net/2020/719-1.html
+        sudo webbench -c 4000 -t 3600 http://xirikm.net/2020/719-1.html
 
         
