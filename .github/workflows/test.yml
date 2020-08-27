@@ -22,7 +22,7 @@ jobs:
         
     - name: Superbench
       run: |
-        wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
+        sudo wget -qO- https://raw.githubusercontent.com/oooldking/script/master/superbench.sh | bash
         
     - name: Install Webbench and Test website
       run: |
