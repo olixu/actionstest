@@ -26,8 +26,8 @@ jobs:
         wget http://home.tiscali.cz/~cz210552/distfiles/webbench-1.5.tar.gz
         tar zxvf webbench-1.5.tar.gz 
         cd webbench-1.5/
-        make
-        make install
-        webbench -c 1000 -t 60 http://202.120.37.239:8000/3.jpg
+        sudo make
+        sudo make install
+        sudo webbench -c 1000 -t 60 http://202.120.37.239:8000/3.jpg
 
         
