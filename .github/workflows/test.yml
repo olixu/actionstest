@@ -19,7 +19,7 @@ jobs:
       run: |
         #sudo apt update
         #sudo apt upgrade
-        apt install axel
+        sudo apt install axel
         
     - name: Superbench
       run: |
